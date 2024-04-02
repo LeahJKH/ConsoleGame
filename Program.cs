@@ -26,5 +26,3 @@ else
 {
     Console.WriteLine("Sorry, you lose.");
 }
-
-Console.WriteLine(int);

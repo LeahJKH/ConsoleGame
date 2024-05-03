@@ -19,7 +19,7 @@
         Console.WriteLine($"lets get started, {name}");
         Console.WriteLine($"you where a {age} old.... okay whats your gender actually");
         string gender = Console.ReadLine();
-        Console.WriteLine($"Great, now that i know you are ${gender} we can continue");
+        Console.WriteLine($"Great, now that i know you are {gender} we can continue");
         Console.WriteLine("");
         Console.WriteLine("");
         Console.WriteLine("first of all choose a class");
@@ -29,15 +29,21 @@
          Console.WriteLine("WRITE NUMBER OF THE CLASS YOU WANT:");
          
         int yourClass = Convert.ToInt32(Console.ReadLine());
-        if(yourClass == 1) {
-        Console.WriteLine("you choose mage");
+        if (yourClass <= 3 || yourClass >= 1)
+        {
+                if(yourClass == 1) {
+            Console.WriteLine("you choose mage");
+            }
+            if(yourClass == 2) {
+            Console.WriteLine("you choose barbarian");
+            }
+            if(yourClass == 3) {
+            Console.WriteLine("you choose swordsman");
+            }
+        } else {
+            Console.WriteLine("dont be an idiot");
         }
-        if(yourClass == 2) {
-        Console.WriteLine("you choose barbarian");
-        }
-        if(yourClass == 3) {
-        Console.WriteLine("you choose swordsman");
-        }
+      
         
     }
     }

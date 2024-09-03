@@ -22,12 +22,32 @@ public class Person
         public void SceneTwo(string Name, int Age)
         {
             Console.WriteLine("So you wake up in a damp cellar");
-            Console.WriteLine($"{Name}- this is why I don't drink often");
+            Thread.Sleep(2000);
+            Console.WriteLine($"{Name}: this is why I don't drink often");
             Console.WriteLine("You see a door and a bed. Something is beside you. What do you do?");
             string action = Console.ReadLine(); 
             if (action.ToLower().Contains("bed")) 
             {
-                Console.WriteLine("You check the bed.");
+                if(action.ToLower().Contains("sleep"))
+                {
+                    Console.WriteLine("You go to sleep");
+                    Thread.Sleep(2000);
+                    Console.WriteLine("you died");
+                
+                } 
+                Console.WriteLine($"{action}");
+            }
+            if (action.ToLower().Contains("door")) 
+            {
+                Console.WriteLine($"{action}");
+            }
+            if (action.ToLower().Contains("beside")) 
+            {
+                Console.WriteLine($"{action}");
+            }
+            if (!action.ToLower().Contains("bed") && !action.ToLower().Contains("door") && !action.ToLower().Contains("beside"))
+            {
+                Console.WriteLine("you cant do that");
             }
         }
     }
